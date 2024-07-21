@@ -45,3 +45,10 @@ def test_calculate_shipping_cost_decision():
     assert calculate_shipping_cost(15, "somewhere_else") == "Invalid destination"
     assert calculate_shipping_cost(15, "domestic") == 6.75
     assert calculate_shipping_cost(15, "international") == 9.0
+    
+def test_calculate_shipping_cost_C2():
+    # C2 testing
+    assert calculate_shipping_cost(0, "domestic") == "Invalid weight"
+    assert calculate_shipping_cost(5, "domestic") == 3.75
+    assert calculate_shipping_cost(5, "somewhere_else") == "Invalid destination"
+    assert calculate_shipping_cost(15, "international") == 9.0
